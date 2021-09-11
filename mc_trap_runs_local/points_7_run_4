@@ -1,0 +1,3 @@
+dim,sample_points,num_reruns,mc_ans,mc_ans_std,mc_1000_time,mc_time_std,trap_ans,trap_ans_std,trap_1000_time,trap_time_std
+10,100000,2,0.0641,0.0001,12.6044,0.0020,0.0660,0.0000,3.7355,0.0000
+20,7340032,2,0.0041,0.0000,2352.2711,0.0013,0.0052,0.0000,62.8235,0.0000

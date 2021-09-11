@@ -1,0 +1,17 @@
+dim,sample_points,num_reruns,mc_ans,mc_1000_time,trap_ans,trap_1000_time
+10,100000,100,0.0641,9.6257,0.0660,3.2335
+dim,sample_points,num_reruns,mc_ans,mc_ans_std,mc_1000_time,mc_time_std,trap_ans,trap_ans_std,trap_1000_time,trap_time_std
+dim,sample_points,num_reruns,mc_ans,mc_ans_std,mc_1000_time,mc_time_std,trap_ans,trap_ans_std,trap_1000_time,trap_time_std
+dim,sample_points,num_reruns,mc_ans,mc_ans_std,mc_1000_time,mc_time_std,trap_ans,trap_ans_std,trap_1000_time,trap_time_std
+dim,sample_points,num_reruns,mc_ans,mc_ans_std,mc_1000_time,mc_time_std,trap_ans,trap_ans_std,trap_1000_time,trap_time_std
+dim,sample_points,num_reruns,mc_ans,mc_ans_std,mc_1000_time,mc_time_std,trap_ans,trap_ans_std,trap_1000_time,trap_time_std
+dim,sample_points,num_reruns,mc_ans,mc_ans_std,mc_1000_time,mc_time_std,trap_ans,trap_ans_std,trap_1000_time,trap_time_std
+dim,sample_points,num_reruns,mc_ans,mc_ans_std,mc_1000_time,mc_time_std,trap_ans,trap_ans_std,trap_1000_time,trap_time_std
+dim,sample_points,num_reruns,mc_ans,mc_ans_std,mc_1000_time,mc_time_std,trap_ans,trap_ans_std,trap_1000_time,trap_time_std
+dim,sample_points,num_reruns,mc_ans,mc_ans_std,mc_1000_time,mc_time_std,trap_ans,trap_ans_std,trap_1000_time,trap_time_std
+dim,sample_points,num_reruns,mc_ans,mc_ans_std,mc_1000_time,mc_time_std,trap_ans,trap_ans_std,trap_1000_time,trap_time_std
+dim,sample_points,num_reruns,mc_ans,mc_ans_std,mc_1000_time,mc_time_std,trap_ans,trap_ans_std,trap_1000_time,trap_time_std
+dim,sample_points,num_reruns,mc_ans,mc_ans_std,mc_1000_time,mc_time_std,trap_ans,trap_ans_std,trap_1000_time,trap_time_std
+dim,sample_points,num_reruns,mc_ans,mc_ans_std,mc_1000_time,mc_time_std,trap_ans,trap_ans_std,trap_1000_time,trap_time_std
+dim,sample_points,num_reruns,mc_ans,mc_ans_std,mc_1000_time,mc_time_std,trap_ans,trap_ans_std,trap_1000_time,trap_time_std
+10,100000

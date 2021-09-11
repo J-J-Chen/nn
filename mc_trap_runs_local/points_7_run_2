@@ -1,0 +1,2 @@
+dim,sample_points,num_reruns,mc_ans,mc_ans_std,mc_1000_time,mc_time_std,trap_ans,trap_ans_std,trap_1000_time,trap_time_std
+10,100000,2
