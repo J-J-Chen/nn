@@ -11,25 +11,18 @@ class mhmc():
     self.dims = dims
     self.step = 0
     self.prev = torch.random.normal(dims)
-    self.prev_eval = self.functions(self.prev)
+    self.prev_eval = functions[0](self.prev) * functions[1](self.prev)
     
-    self.transition_model = lambda x: [x[0], torch.random.normal(x[1], 0.5, (1,))]
+  def importance_w(psi1, psi2):
+    return torch.mean(torch.abs(psi1)*torch.abs(psi2))
 
   def integrate():
-    pass
+    self.random_walk(self.prev)
+    return self.prev_eval
 
-  def mh_step():
-    x_new = self.transition_model(x)
-    x_like = self.man_log_like_norm(x, self.prev)
-    x_update_like = self.man_log_like_norm(x_new, data)
-    self.step += 1
-
-  def prior(x):
-    return 0 if x[1] <= 0 else 1
-
-  def man_log_like_norm(x, data):
-    return torch.sum(-torch.log(x[1]*torch.sqrt(2*np.pi))-((data-x[0])**2)\
-        / (2*x[1]**2))
+  def integration():
+    vals = self.functions[0](x) * self.functions[1](x)
+    return torch.mean(vals/self.importance_w(psi))
 
   def random_walk(x, acceptance_rate=0.2):
     _, num_dim = x.shape
@@ -37,18 +30,17 @@ class mhmc():
       dim_range = self.dims[dim][1] - self.dims[dim][0]
       x[:][dim] += torch.normal(0, dim_range/5, size=x.shape)
     if self.prev.shape != x.shape:
-      print(f"ERROR: Trying to update integral of {self.prev.shape} with integral of {x.shape}.")
+        exit()
+        #print(f"ERROR: Trying to update integral of {self.prev.shape} with integral of {x.shape}.")
     for i, el in enumerate(x):
       #TODO: Add optional arguments
-      vals = self.functions(x, self.args)
+      #vals = self.functions(x, self.args)
+      #vals = self.functions[0](x) * self.functions[1](x)
+      vals = self.integration()
       for i, el in enumerate(vals):
         if el/self.prev_eval[i] >= 1 or random.uniform(0,1) < acceptance_rate:
           self.prev[i] = el
-      self.prev_eval = self.functions(self.prev, self.args)
-
-  def dist(x):
-    return torch.sqrt(torch.sum(x**2))
-
-  def norm_const():
-    pass
+      #self.prev_eval = self.functions(self.prev, self.args)
+      self.prev_eval = self.integration()
+      self.step += 1
 
